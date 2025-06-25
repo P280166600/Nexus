@@ -113,9 +113,9 @@ echo ''
 # 主循环
 while true; do
     echo \"\$(date): 启动节点 $NODE_ID\"
-    nexus-network start --node-id \"$NODE_ID\"
-    echo \"\$(date): 节点停止，2小时后重启...\"
-    sleep 7200
+    nexus-network start --node-id \"$NODE_ID\"  --max-threads 8
+    echo \"\$(date): 节点停止，1小时后重启...\"
+    sleep 3600
 done
 "
 
